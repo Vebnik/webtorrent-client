@@ -1,8 +1,12 @@
 @import "../fontawesome/css/all.css";
 @import "WindowBar.css";
 @import "MainContent.css";
+@import "SearchBar.css";
+@import "AddNewFile.css";
 
 * {
+  user-select: none;
+  user-focus: none;
   padding: 0;
   margin: 0;
   border: none;

@@ -1,0 +1,27 @@
+.AddNewFile {
+
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+
+    color: #a2a2a2;
+    width: 130px;
+    height: 50px;
+
+    border: 2px solid rgba(245, 147, 0, 0.76);
+    border-radius: 7px;
+
+    text-align: center;
+}
+
+.AddNewFile>i {
+    cursor: pointer;
+    margin-top: 10px;
+    color: #a2a2a2;
+    font-size: 30px;
+
+    transition-duration: 250ms;
+}
+
+.AddNewFile>i:hover {
+    color: #83d543;
+}

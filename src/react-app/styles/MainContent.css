@@ -1,9 +1,13 @@
 .MainContent {
+    align-items: center;
     margin: auto;
     margin-top: 0.1%;
+
     background-color: rgba(0, 0, 0, 0.28);
     width: 99%;
     height: 99%;
-
     border-radius: 7px;
+
+    display: grid;
+    grid-template-rows: 10% 90%;
 }

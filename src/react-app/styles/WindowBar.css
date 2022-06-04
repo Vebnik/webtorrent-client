@@ -1,40 +1,56 @@
 :root {
-    --primary-color: rgba(245, 94, 0, 0.72);
+    --primary-color: rgba(245, 147, 0, 0.76);
 }
 
 .WindowBar {
     margin: auto;
     width: 100%;
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0.49);
+    height: 98%;
+    background-color: #545454;
 
     display: grid;
     grid-template-columns: 89% 5% 5%;
 }
 
 .WindowDrag {
-    margin: auto;
-    width: 98%;
-    height: 20px;
-    background-color: var(--primary-color);
-    border-radius: 5px;
-
     -webkit-app-region: drag;
 }
 
 .WinMinimize {
+    cursor: pointer;
+
     margin: auto;
     width: 98%;
-    height: 20px;
+    height: 80%;
     background-color: var(--primary-color);
-    border-radius: 5px;
+    border-radius: 7px;
+
+    text-align: center;
+    transition-duration: 250ms;
+}
+
+.WinMinimize:hover {
+    background-color: #f59300;
 }
 
 .WimClose {
+    cursor: pointer;
+
     margin: auto;
     margin-left: 5px;
     width: 98%;
-    height: 20px;
+    height: 80%;
     background-color: var(--primary-color);
-    border-radius: 5px;
+    border-radius: 7px;
+
+    text-align: center;
+    transition-duration: 250ms;
+}
+
+.WimClose:hover {
+    background-color: #f59300;
+}
+
+.WimClose>i {
+    margin: 2px;
 }

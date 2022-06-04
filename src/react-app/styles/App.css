@@ -10,10 +10,11 @@
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: #545454;
 }
 
 .App {
+  margin: auto;
   display: grid;
-  grid-template-rows: 30px auto;
+  grid-template-rows: 25px 742px;
 }

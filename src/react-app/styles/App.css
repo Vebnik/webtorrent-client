@@ -1,5 +1,6 @@
 @import "../fontawesome/css/all.css";
-
+@import "WindowBar.css";
+@import "MainContent.css";
 
 * {
   padding: 0;
@@ -13,5 +14,6 @@ body {
 }
 
 .App {
-
+  display: grid;
+  grid-template-rows: 30px auto;
 }

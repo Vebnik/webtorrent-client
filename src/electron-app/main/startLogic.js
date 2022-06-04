@@ -22,6 +22,7 @@ class StartApp {
 				nodeIntegration: true,
 				preload: ''
 			},
+			frame: false,
 			autoHideMenuBar: true,
 			resizable: false,
 			width: 1362,

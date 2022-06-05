@@ -3,6 +3,8 @@
 @import "MainContent.css";
 @import "SearchBar.css";
 @import "AddNewFile.css";
+@import "TorrentList.css";
+@import "TorrentElement.css";
 
 * {
   user-select: none;

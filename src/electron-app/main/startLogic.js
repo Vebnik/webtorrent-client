@@ -1,4 +1,6 @@
 const { app, BrowserWindow } = require('electron')
+const path = require("path");
+const {ipcHandler} = require("./ipcMain");
 
 
 class StartApp {
@@ -20,12 +22,12 @@ class StartApp {
 				devTools: true,
 				contextIsolation: true,
 				nodeIntegration: true,
-				preload: ''
+				preload: path.join(__dirname, '..', 'renderer', 'preload.js')
 			},
 			frame: false,
 			autoHideMenuBar: true,
 			resizable: false,
-			width: 1362,
+			width: 1062,
 			height: 768,
 		})
 
@@ -40,7 +42,7 @@ class StartApp {
 	}
 
 	async #appEventHandler() {
-		app.on('ready', () => this.#createWindow())
+		app.on('ready', () => { this.#createWindow(); ipcHandler()})
 		app.on('window-all-closed', () => app.quit())
 
 	}

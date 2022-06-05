@@ -1,0 +1,55 @@
+.TorrentElement {
+    width: 900px;
+    height: 55px;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 50% 10% 20% 20%;
+    color: #a2a2a2;
+    font-size: 18px;
+
+    border-bottom: #f59300 1px solid;
+    border-top: #f59300 1px solid;
+
+    text-align: center;
+
+}
+
+.TorrentInfo {
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    text-align: center;
+    border-radius: 7px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #3d3d3d;
+}
+
+.TorrentDrive {
+    width: 85%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 28px;
+    border-radius: 7px;
+
+    background-color: #3d3d3d;
+}
+
+.TorrentDrive>i {
+    padding: 5px;
+    cursor: pointer;
+    margin: auto;
+    border-radius: 7px;
+    transition-duration: 250ms;
+}
+
+.TorrentDrive>i:hover {
+    background-color: rgba(0, 0, 0, 0.38);
+}

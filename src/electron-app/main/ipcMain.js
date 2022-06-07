@@ -1,5 +1,6 @@
 const { ipcMain } = require('electron')
-const { getCurrentTorrent, addNewTorrent, addNewTorrentOnFile, openDownloadFolder } = require('./webtorrent/driveWebTorrent')
+const { getCurrentTorrent, addNewTorrent, addNewTorrentOnFile } = require('./webtorrent/driveWebTorrent')
+const { openDownloadFolder, minCloseWindow } = require("./windowDrive");
 
 
 const ipcHandler = () => {
@@ -20,6 +21,10 @@ const ipcHandler = () => {
 	//
 	ipcMain.handle('dialog:openDownloadFolder', async (event, args) => {
 		openDownloadFolder()
+	})
+	//
+	ipcMain.handle('dialog:windowDrive', async (event, args) => {
+		minCloseWindow(args)
 	})
 }
 

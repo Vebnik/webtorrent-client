@@ -37,10 +37,7 @@ const addNewTorrentOnFile = async () => {
 		})
 }
 
-// other Logic
-const openDownloadFolder = (path = app.getPath('downloads')) => {
-	childProc.exec(`explorer ${path}`)
-}
-module.exports = { addNewTorrent, getCurrentTorrent, addNewTorrentOnFile, openDownloadFolder }
+
+module.exports = { addNewTorrent, getCurrentTorrent, addNewTorrentOnFile}
 
 

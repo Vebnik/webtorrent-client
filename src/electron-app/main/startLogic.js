@@ -8,7 +8,7 @@ class StartApp {
 	#window
 	#AppType
 	#devUrl = 'http://localhost:3000'
-	#prodUrl = ''
+	#prodUrl = path.join(__dirname, '..', '..', '..', 'build', 'index.html')
 
 	constructor(type) {
 		this.#AppType = type
@@ -35,7 +35,7 @@ class StartApp {
 
 			case 'dev': this.#window.loadURL(this.#devUrl).catch(err => console.error(err))
 				break
-			case 'prod': this.#window.loadFile().catch(err => console.error(err))
+			case 'prod': this.#window.loadFile(this.#prodUrl).catch(err => console.error(err))
 				break
 		}
 
@@ -55,4 +55,4 @@ class StartApp {
 	}
 }
 
-module.exports = { StartApp }
+module.exports = { StartApp, BrowserWindow }

@@ -8,5 +8,9 @@ export const ContextMainRender = {
 	},
 	openDownloadFolder: async () => {
 		await window.webTorrent.openDownloadFolder()
+	},
+	minCloseWindow: async (action) => {
+		console.log('in ContextMainRender')
+		await window.webTorrent.minCloseWindow(action)
 	}
 }

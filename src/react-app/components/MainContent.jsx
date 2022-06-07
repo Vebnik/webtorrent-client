@@ -6,7 +6,7 @@ import {ContextMainRender} from "../context-bridge/contextMainRender";
 
 const MainContent = () => {
 
-	const [torList, setTorList] = useState([])
+	let [torList, setTorList] = useState([]) // let -> useMemo
 
 	useMemo(() => setInterval(() => {
 		ContextMainRender.getTorrents().then(dataTor => {
@@ -20,7 +20,7 @@ const MainContent = () => {
 			<SearchBar/>
 			<TorrentList torList={torList} />
 		</div>
-	);
-};
+	)
+}
 
 export default MainContent;

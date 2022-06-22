@@ -1,7 +1,8 @@
 const { app, BrowserWindow } = require('electron')
 const path = require("path");
-const {ipcHandler} = require("./ipcMain");
-
+const { ipcHandler } = require("./ipcMain");
+const { createNewSavDir } = require('./webtorrent/firstStartLogic')
+const { loadHistoryTorrent } = require("./webtorrent/driveWebTorrent");
 
 class StartApp {
 
@@ -39,6 +40,9 @@ class StartApp {
 				break
 		}
 
+		// other logic
+		createNewSavDir().catch(err => console.error(err))
+		loadHistoryTorrent()
 	}
 
 	async #appEventHandler() {
